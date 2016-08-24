@@ -1,0 +1,2105 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>release(func) | IEnumerable</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-edit-link/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../../docs/api/Others/Remove.html" />
+    
+    
+    <link rel="prev" href="../../../docs/api/Others/Product.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="3.5.24" data-basepath="../../.." data-revision="Wed Aug 24 2016 22:10:14 GMT+0200 (CEST)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Read Me
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="docs/introduction/index.html">
+            
+                
+                    <a href="../../../docs/introduction/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="docs/introduction/Motivation.html">
+            
+                
+                    <a href="../../../docs/introduction/Motivation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Motivation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="docs/introduction/Features.html">
+            
+                
+                    <a href="../../../docs/introduction/Features.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Features
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="docs/introduction/Examples.html">
+            
+                
+                    <a href="../../../docs/introduction/Examples.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Examples
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="docs/Glossary.html">
+            
+                
+                    <a href="../../../docs/Glossary.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Glossary
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="docs/api/index.html">
+            
+                
+                    <a href="../../../docs/api/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        API Reference
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="docs/api/Creational/index.html">
+            
+                
+                    <a href="../../../docs/api/Creational/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Creational
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="docs/api/Creational/Empty.html">
+            
+                
+                    <a href="../../../docs/api/Creational/Empty.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        static empty()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="docs/api/Creational/From.html">
+            
+                
+                    <a href="../../../docs/api/Creational/From.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        static from(source)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="docs/api/Creational/GetWhile.html">
+            
+                
+                    <a href="../../../docs/api/Creational/GetWhile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.3.</b>
+                        
+                        static getWhile(condition, provider)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="docs/api/Creational/Range.html">
+            
+                
+                    <a href="../../../docs/api/Creational/Range.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.4.</b>
+                        
+                        static range(start = 0, end, step = 1)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="docs/api/Creational/Repeat.html">
+            
+                
+                    <a href="../../../docs/api/Creational/Repeat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.5.</b>
+                        
+                        static repeat(...params, times)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="docs/api/Creational/While.html">
+            
+                
+                    <a href="../../../docs/api/Creational/While.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.6.</b>
+                        
+                        static while(condition, provider)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="docs/api/Converters/index.html">
+            
+                
+                    <a href="../../../docs/api/Converters/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Converters
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="docs/api/Converters/ReleaseToFormat.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ReleaseToFormat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        releaseToFormat(format)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="docs/api/Converters/ReleaseToType.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ReleaseToType.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.</b>
+                        
+                        releaseToType(type)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="docs/api/Converters/ToArray.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToArray.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.3.</b>
+                        
+                        toArray()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="docs/api/Converters/ToDictionary.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToDictionary.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.4.</b>
+                        
+                        toDictionary(getKey, getValue)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="docs/api/Converters/ToFormat.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToFormat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.5.</b>
+                        
+                        toFormat(format)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="docs/api/Converters/ToIterator.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToIterator.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.6.</b>
+                        
+                        toIterator()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="docs/api/Converters/ToJSON.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToJSON.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.7.</b>
+                        
+                        toJSON()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="docs/api/Converters/ToList.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToList.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.8.</b>
+                        
+                        toList()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="docs/api/Converters/ToLocaleString.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToLocaleString.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.9.</b>
+                        
+                        toLocaleString()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="docs/api/Converters/ToMap.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToMap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.10.</b>
+                        
+                        toMap(getKey, getValue)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.11" data-path="docs/api/Converters/ToObject.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToObject.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.11.</b>
+                        
+                        toObject()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.12" data-path="docs/api/Converters/ToSet.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToSet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.12.</b>
+                        
+                        toSet()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.13" data-path="docs/api/Converters/ToString.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToString.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.13.</b>
+                        
+                        toString(separator = &#39;,&#39;)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.14" data-path="docs/api/Converters/ToType.html">
+            
+                
+                    <a href="../../../docs/api/Converters/ToType.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.14.</b>
+                        
+                        toType(type)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="docs/api/SqlLike/index.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Sql Like
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="docs/api/SqlLike/Aggregate.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Aggregate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        aggregate(callback, initialValue)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="docs/api/SqlLike/AggregateRight.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/AggregateRight.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        aggregateRight(callback, initialValue)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="docs/api/SqlLike/Cast.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Cast.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.3.</b>
+                        
+                        cast(type)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="docs/api/SqlLike/Count.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Count.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.4.</b>
+                        
+                        count(predicate = trueFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="docs/api/SqlLike/Delete.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Delete.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.5.</b>
+                        
+                        delete(...items)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="docs/api/SqlLike/Distinct.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Distinct.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.6.</b>
+                        
+                        distinct()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="docs/api/SqlLike/Except.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Except.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.7.</b>
+                        
+                        except(source)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="docs/api/SqlLike/First.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/First.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.8.</b>
+                        
+                        first()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="docs/api/SqlLike/FirstOrDefault.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/FirstOrDefault.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.9.</b>
+                        
+                        firstOrDefault(default)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="docs/api/SqlLike/GroupBy.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/GroupBy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.10.</b>
+                        
+                        groupBy(keySelector, elementSelector, resultSelector, comparer = Enumerable deep comparison)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.11" data-path="docs/api/SqlLike/GroupJoin.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/GroupJoin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.11.</b>
+                        
+                        groupJoin(inner, outerKeySelector, innerKeySelector, resultSelector, comparer = Enumerable deep comparison)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.12" data-path="docs/api/SqlLike/Having.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Having.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.12.</b>
+                        
+                        having(callback, thisArg)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.13" data-path="docs/api/SqlLike/Insert.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Insert.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.13.</b>
+                        
+                        insert(...items)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.14" data-path="docs/api/SqlLike/Intersect.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Intersect.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.14.</b>
+                        
+                        intersect(source)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.15" data-path="docs/api/SqlLike/Join.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Join.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.15.</b>
+                        
+                        join(inner, outerKeySelector, innerKeySelector, resultSelector, comparer = Enumerable deep comparison)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.16" data-path="docs/api/SqlLike/Last.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Last.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.16.</b>
+                        
+                        last()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.17" data-path="docs/api/SqlLike/LastOrDefault.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/LastOrDefault.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.17.</b>
+                        
+                        lastOrDefault(default)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.18" data-path="docs/api/SqlLike/OrderBy.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/OrderBy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.18.</b>
+                        
+                        orderBy(...getValues = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.19" data-path="docs/api/SqlLike/OrderByAscending.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/OrderByAscending.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.19.</b>
+                        
+                        orderByAscending(...getValues = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.20" data-path="docs/api/SqlLike/OrderByDescending.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/OrderByDescending.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.20.</b>
+                        
+                        orderByDescending(...getValues = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.21" data-path="docs/api/SqlLike/Select.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Select.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.21.</b>
+                        
+                        select(formatter = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.22" data-path="docs/api/SqlLike/SelectMany.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/SelectMany.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.22.</b>
+                        
+                        selectMany(formatter = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.23" data-path="docs/api/SqlLike/Single.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Single.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.23.</b>
+                        
+                        single(predicate)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.24" data-path="docs/api/SqlLike/SingleOrDefault.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/SingleOrDefault.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.24.</b>
+                        
+                        singleOrDefault(predicate, default)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.25" data-path="docs/api/SqlLike/Skip.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Skip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.25.</b>
+                        
+                        skip(n = 0)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.26" data-path="docs/api/SqlLike/SkipLast.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/SkipLast.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.26.</b>
+                        
+                        skipLast(n = 0)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.27" data-path="docs/api/SqlLike/SkipLastWhile.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/SkipLastWhile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.27.</b>
+                        
+                        skipLastWhile(condition)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.28" data-path="docs/api/SqlLike/SkipWhile.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/SkipWhile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.28.</b>
+                        
+                        skipWhile(condition)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.29" data-path="docs/api/SqlLike/Take.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Take.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.29.</b>
+                        
+                        take(n = Enumerable length)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.30" data-path="docs/api/SqlLike/TakeLast.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/TakeLast.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.30.</b>
+                        
+                        takeLast(n = Enumerable length)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.31" data-path="docs/api/SqlLike/TakeLastWhile.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/TakeLastWhile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.31.</b>
+                        
+                        takeLastWhile(condition)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.32" data-path="docs/api/SqlLike/TakeWhile.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/TakeWhile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.32.</b>
+                        
+                        takeWhile(condition)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.33" data-path="docs/api/SqlLike/UnionAll.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/UnionAll.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.33.</b>
+                        
+                        unionAll(source)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.34" data-path="docs/api/SqlLike/Union.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Union.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.34.</b>
+                        
+                        union(source)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.35" data-path="docs/api/SqlLike/Update.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Update.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.35.</b>
+                        
+                        update(modifier)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.36" data-path="docs/api/SqlLike/Where.html">
+            
+                
+                    <a href="../../../docs/api/SqlLike/Where.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.36.</b>
+                        
+                        where(callback, thisArg)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="docs/api/ArrayLike/index.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Array Like
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="docs/api/ArrayLike/Concat.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Concat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        concat(source)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="docs/api/ArrayLike/CopyWithin.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/CopyWithin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        copyWithin(target, start = 0, end = Enumerable length)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="docs/api/ArrayLike/Entries.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Entries.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.3.</b>
+                        
+                        entries()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="docs/api/ArrayLike/Every.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Every.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.4.</b>
+                        
+                        every(callback)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="docs/api/ArrayLike/Includes.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Includes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.5.</b>
+                        
+                        includes(item)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="docs/api/ArrayLike/IndexOf.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/IndexOf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.6.</b>
+                        
+                        indexOf(item, start = 0)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="docs/api/ArrayLike/Fill.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Fill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.7.</b>
+                        
+                        fill(value, start = 0, end = Enumerable length)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="docs/api/ArrayLike/Filter.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Filter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.8.</b>
+                        
+                        filter(callback, thisArg)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.9" data-path="docs/api/ArrayLike/ForEach.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/ForEach.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.9.</b>
+                        
+                        forEach(callback, thisArg)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.10" data-path="docs/api/ArrayLike/Keys.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Keys.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.10.</b>
+                        
+                        keys()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.11" data-path="docs/api/ArrayLike/LastIndexOf.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/LastIndexOf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.11.</b>
+                        
+                        lastIndexOf(item, end = Enumerable length)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.12" data-path="docs/api/ArrayLike/Map.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Map.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.12.</b>
+                        
+                        map(callback, thisArg)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.13" data-path="docs/api/ArrayLike/Pop.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Pop.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.13.</b>
+                        
+                        pop(callback = noop)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.14" data-path="docs/api/ArrayLike/Push.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Push.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.14.</b>
+                        
+                        push(...items)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.15" data-path="docs/api/ArrayLike/Reduce.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Reduce.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.15.</b>
+                        
+                        reduce(callback, initialValue)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.16" data-path="docs/api/ArrayLike/ReduceRight.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/ReduceRight.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.16.</b>
+                        
+                        reduceRight(callback, initialValue)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.17" data-path="docs/api/ArrayLike/Reverse.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Reverse.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.17.</b>
+                        
+                        reverse()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.18" data-path="docs/api/ArrayLike/Shift.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Shift.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.18.</b>
+                        
+                        shift(callback = noop)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.19" data-path="docs/api/ArrayLike/Slice.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Slice.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.19.</b>
+                        
+                        slice(start = 0, end = Enumerable length)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.20" data-path="docs/api/ArrayLike/Some.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Some.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.20.</b>
+                        
+                        some(callback)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.21" data-path="docs/api/ArrayLike/Sort.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Sort.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.21.</b>
+                        
+                        sort(compareFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.22" data-path="docs/api/ArrayLike/Splice.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Splice.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.22.</b>
+                        
+                        splice(start, deleteCount)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.23" data-path="docs/api/ArrayLike/Unshift.html">
+            
+                
+                    <a href="../../../docs/api/ArrayLike/Unshift.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.23.</b>
+                        
+                        unshift(...items)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="docs/api/Others/index.html">
+            
+                
+                    <a href="../../../docs/api/Others/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Others
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="docs/api/Others/All.html">
+            
+                
+                    <a href="../../../docs/api/Others/All.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        all(callback)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="docs/api/Others/AllEqualTo.html">
+            
+                
+                    <a href="../../../docs/api/Others/AllEqualTo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.2.</b>
+                        
+                        allEqualTo(item)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="docs/api/Others/AllValuesSame.html">
+            
+                
+                    <a href="../../../docs/api/Others/AllValuesSame.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.3.</b>
+                        
+                        allValuesSame()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.4" data-path="docs/api/Others/Any.html">
+            
+                
+                    <a href="../../../docs/api/Others/Any.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.4.</b>
+                        
+                        any(callback)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.5" data-path="docs/api/Others/Avg.html">
+            
+                
+                    <a href="../../../docs/api/Others/Avg.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.5.</b>
+                        
+                        avg(getValue = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.6" data-path="docs/api/Others/Average.html">
+            
+                
+                    <a href="../../../docs/api/Others/Average.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.6.</b>
+                        
+                        average(getValue = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.7" data-path="docs/api/Others/Clean.html">
+            
+                
+                    <a href="../../../docs/api/Others/Clean.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.7.</b>
+                        
+                        clean()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.8" data-path="docs/api/Others/Compare.html">
+            
+                
+                    <a href="../../../docs/api/Others/Compare.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.8.</b>
+                        
+                        compare()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.9" data-path="docs/api/Others/ConcatAll.html">
+            
+                
+                    <a href="../../../docs/api/Others/ConcatAll.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.9.</b>
+                        
+                        concatAll()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.10" data-path="docs/api/Others/Contains.html">
+            
+                
+                    <a href="../../../docs/api/Others/Contains.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.10.</b>
+                        
+                        contains(item)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.11" data-path="docs/api/Others/Convert.html">
+            
+                
+                    <a href="../../../docs/api/Others/Convert.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.11.</b>
+                        
+                        convert(type)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.12" data-path="docs/api/Others/DefaultIfEmpty.html">
+            
+                
+                    <a href="../../../docs/api/Others/DefaultIfEmpty.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.12.</b>
+                        
+                        defaultIfEmpty(...items)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.13" data-path="docs/api/Others/Dequeue.html">
+            
+                
+                    <a href="../../../docs/api/Others/Dequeue.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.13.</b>
+                        
+                        dequeue(callback = noop)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.14" data-path="docs/api/Others/Enqueue.html">
+            
+                
+                    <a href="../../../docs/api/Others/Enqueue.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.14.</b>
+                        
+                        enqueue(...items)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.15" data-path="docs/api/Others/Entire.html">
+            
+                
+                    <a href="../../../docs/api/Others/Entire.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.15.</b>
+                        
+                        entire(func)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.16" data-path="docs/api/Others/Equals.html">
+            
+                
+                    <a href="../../../docs/api/Others/Equals.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.16.</b>
+                        
+                        equals(source)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.17" data-path="docs/api/Others/Flatten.html">
+            
+                
+                    <a href="../../../docs/api/Others/Flatten.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.17.</b>
+                        
+                        flatten()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.18" data-path="docs/api/Others/IsEmpty.html">
+            
+                
+                    <a href="../../../docs/api/Others/IsEmpty.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.18.</b>
+                        
+                        isEmpty()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.19" data-path="docs/api/Others/Max.html">
+            
+                
+                    <a href="../../../docs/api/Others/Max.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.19.</b>
+                        
+                        max(getValue = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.20" data-path="docs/api/Others/Min.html">
+            
+                
+                    <a href="../../../docs/api/Others/Min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.20.</b>
+                        
+                        min(getValue = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.21" data-path="docs/api/Others/Multiply.html">
+            
+                
+                    <a href="../../../docs/api/Others/Multiply.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.21.</b>
+                        
+                        multiply(getValue = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.22" data-path="docs/api/Others/OfType.html">
+            
+                
+                    <a href="../../../docs/api/Others/OfType.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.22.</b>
+                        
+                        ofType(type)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.23" data-path="docs/api/Others/Product.html">
+            
+                
+                    <a href="../../../docs/api/Others/Product.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.23.</b>
+                        
+                        product(getValue = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5.24" data-path="docs/api/Others/Release.html">
+            
+                
+                    <a href="../../../docs/api/Others/Release.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.24.</b>
+                        
+                        release(func)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.25" data-path="docs/api/Others/Remove.html">
+            
+                
+                    <a href="../../../docs/api/Others/Remove.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.25.</b>
+                        
+                        remove(...items)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.26" data-path="docs/api/Others/SequenceEqual.html">
+            
+                
+                    <a href="../../../docs/api/Others/SequenceEqual.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.26.</b>
+                        
+                        sequenceEqual(source)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.27" data-path="docs/api/Others/Shuffle.html">
+            
+                
+                    <a href="../../../docs/api/Others/Shuffle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.27.</b>
+                        
+                        shuffle()
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.28" data-path="docs/api/Others/Sum.html">
+            
+                
+                    <a href="../../../docs/api/Others/Sum.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.28.</b>
+                        
+                        sum(getValue = identityFunction)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="CHANGELOG.html">
+            
+                
+                    <a href="../../../CHANGELOG.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Change Log
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="docs/Authors.html">
+            
+                
+                    <a href="../../../docs/Authors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Authors
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="docs/Chat.html">
+            
+                
+                    <a href="../../../docs/Chat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Chat
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../" >IEnumerable</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <a id="edit-link" href="https://github.com/mbasso/ienumerable/tree/master/docs/api/Others/Release.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="-release-func"><code>release(func)</code></h1>
+<p>Release Enumerable&apos;s items to a function.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>func (<em>function</em>): function that take the items.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<p>(<em>any</em>): value returned by <code>func</code>.</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-js"><span class="token keyword">const</span> func <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>params<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>params<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Enumerable
+        <span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// console.log(2, 5, 9, 2, 18)</span>
+<span class="token comment" spellcheck="true">// 18</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../../docs/api/Others/Product.html" class="navigation navigation-prev " aria-label="Previous page: product(getValue = identityFunction)"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../../docs/api/Others/Remove.html" class="navigation navigation-next " aria-label="Next page: remove(...items)"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../../gitbook/app.js"></script>
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-github/plugin.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-anker-enable/anker.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"edit-link":{"base":"https://github.com/mbasso/ienumerable/tree/master","label":"Edit This Page"},"github":{"url":"https://github.com/mbasso/ienumerable/"}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
