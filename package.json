@@ -1,6 +1,6 @@
 {
   "name": "ienumerable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deep immutable, Lightweight Enumerable with superpowers",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
