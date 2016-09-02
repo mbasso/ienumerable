@@ -1,10 +1,10 @@
-# `product(getValue = identityFunction)`
+# `product(elementSelector = identityFunction)`
 
 Returns the product of selected values.
 
 #### Arguments
 
-- getValue (*function*): function that must return the value to make the product, taking each element.
+- elementSelector (*function*): function that must return the value to make the product, taking each element.
 
 #### Returns
 
@@ -32,4 +32,4 @@ Enumerable
 
 #### Aliases
 
-- [`multiply(getValue = identityFunction)`](/Multiply.md)
+- [`multiply(elementSelector = identityFunction)`](/Multiply.md)

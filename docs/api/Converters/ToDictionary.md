@@ -1,11 +1,11 @@
-# `toDictionary(getKey, getValue)`
+# `toDictionary(keySelector, elementSelector)`
 
 Create an Object from an Enumerable.
 
 #### Arguments
 
-- getKey (*function*): function that return a key for each element.
-- getValue (*function*): function that return a value for each element.
+- keySelector (*function*): function that return a key for each element.
+- elementSelector (*function*): function that return a value for each element.
 
 #### Returns
 

@@ -1,10 +1,10 @@
-# `sum(getValue = identityFunction)`
+# `sum(elementSelector = identityFunction)`
 
 Returns the sum of selected values.
 
 #### Arguments
 
-- getValue (*function*): function that must return the value to make the sum, taking each element.
+- elementSelector (*function*): function that must return the value to make the sum, taking each element.
 
 #### Returns
 

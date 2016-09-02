@@ -1,3 +1,3 @@
-# `average(getValue = identityFunction)`
+# `average(elementSelector = identityFunction)`
 
-This is an alias of [avg(getValue = identityFunction)](Avg.md)
+This is an alias of [avg(elementSelector = identityFunction)](Avg.md)

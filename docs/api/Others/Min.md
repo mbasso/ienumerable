@@ -1,10 +1,10 @@
-# `min(getValue = identityFunction)`
+# `min(elementSelector = identityFunction)`
 
 Returns the min item based on a comparison between the given values.
 
 #### Arguments
 
-- getValue (*function*): function that must return the value to compare, taking each element.
+- elementSelector (*function*): function that must return the value to compare, taking each element.
 
 #### Returns
 

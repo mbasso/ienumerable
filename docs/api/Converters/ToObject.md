@@ -30,4 +30,4 @@ Enumerable
 #### Tips
 
 See also:
-- [toDictionary(getKey, getValue)](/ToDictionary.md)
+- [toDictionary(keySelector, elementSelector)](/ToDictionary.md)

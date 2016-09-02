@@ -23,5 +23,5 @@ Enumerable
 #### Tips
 
 See also:
-- [toJSON(getKey, getValue)](/ToJSON.md)
+- [toJSON()](/ToJSON.md)
 - [toString(separator = ',')](/ToString.md)

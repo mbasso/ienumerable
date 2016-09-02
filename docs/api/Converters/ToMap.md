@@ -1,11 +1,11 @@
-# `toMap(getKey, getValue)`
+# `toMap(keySelector, elementSelector)`
 
 Create a new [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) from an Enumerable.
 
 #### Arguments
 
-- getKey (*function*): function that return a key for each element.
-- getValue (*function*): function that return a value for each element.
+- keySelector (*function*): function that return a key for each element.
+- elementSelector (*function*): function that return a value for each element.
 
 #### Returns
 

@@ -1,3 +1,3 @@
-# `multiply(getValue = identityFunction)`
+# `multiply(elementSelector = identityFunction)`
 
-This is an alias of [product(getValue = identityFunction)](Product.md)
+This is an alias of [product(elementSelector = identityFunction)](Product.md)

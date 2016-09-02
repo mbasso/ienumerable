@@ -1,10 +1,10 @@
-# `avg(getValue = identityFunction)`
+# `avg(elementSelector = identityFunction)`
 
 Returns the average of selected values.
 
 #### Arguments
 
-- getValue (*function*): function that must return the value to make the average, taking each element.
+- elementSelector (*function*): function that must return the value to make the average, taking each element.
 
 #### Returns
 
@@ -32,4 +32,4 @@ Enumerable
 
 #### Aliases
 
-- [`average(getValue = identityFunction)`](/Average.md)
+- [`average(elementSelector = identityFunction)`](/Average.md)

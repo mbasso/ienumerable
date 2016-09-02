@@ -29,5 +29,5 @@ Enumerable
 #### Tips
 
 See also:
-- [toJSON(getKey, getValue)](/ToJSON.md)
+- [toJSON()](/ToJSON.md)
 - [toLocaleString()](/ToLocaleString.md)
