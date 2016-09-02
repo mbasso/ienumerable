@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>max(getValue = identityFunction) | IEnumerable</title>
+        <title>max(elementSelector = identityFunction) | IEnumerable</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -44,7 +44,7 @@
     <body>
         
         
-    <div class="book" data-level="3.5.19" data-basepath="../../.." data-revision="Wed Aug 24 2016 23:21:17 GMT+0200 (CEST)">
+    <div class="book" data-level="3.5.19" data-basepath="../../.." data-revision="Fri Sep 02 2016 23:12:56 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -353,7 +353,7 @@
                         
                             <b>3.2.4.</b>
                         
-                        toDictionary(getKey, getValue)
+                        toDictionary(keySelector, elementSelector)
                     </a>
             
             
@@ -443,7 +443,7 @@
                         
                             <b>3.2.10.</b>
                         
-                        toMap(getKey, getValue)
+                        toMap(keySelector, elementSelector)
                     </a>
             
             
@@ -1526,7 +1526,7 @@
                         
                             <b>3.5.5.</b>
                         
-                        avg(getValue = identityFunction)
+                        avg(elementSelector = identityFunction)
                     </a>
             
             
@@ -1541,7 +1541,7 @@
                         
                             <b>3.5.6.</b>
                         
-                        average(getValue = identityFunction)
+                        average(elementSelector = identityFunction)
                     </a>
             
             
@@ -1736,7 +1736,7 @@
                         
                             <b>3.5.19.</b>
                         
-                        max(getValue = identityFunction)
+                        max(elementSelector = identityFunction)
                     </a>
             
             
@@ -1751,7 +1751,7 @@
                         
                             <b>3.5.20.</b>
                         
-                        min(getValue = identityFunction)
+                        min(elementSelector = identityFunction)
                     </a>
             
             
@@ -1766,7 +1766,7 @@
                         
                             <b>3.5.21.</b>
                         
-                        multiply(getValue = identityFunction)
+                        multiply(elementSelector = identityFunction)
                     </a>
             
             
@@ -1796,7 +1796,7 @@
                         
                             <b>3.5.23.</b>
                         
-                        product(getValue = identityFunction)
+                        product(elementSelector = identityFunction)
                     </a>
             
             
@@ -1871,7 +1871,7 @@
                         
                             <b>3.5.28.</b>
                         
-                        sum(getValue = identityFunction)
+                        sum(elementSelector = identityFunction)
                     </a>
             
             
@@ -2038,11 +2038,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/mbasso/ienumerable/tree/master/docs/api/Others/Max.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="-max-getvalue-identityfunction"><code>max(getValue = identityFunction)</code></h1>
+                        <a id="edit-link" href="https://github.com/mbasso/ienumerable/tree/master/docs/api/Others/Max.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="-max-elementselector-identityfunction"><code>max(elementSelector = identityFunction)</code></h1>
 <p>Returns the max item based on a comparison between the given values.</p>
 <h4 id="arguments">Arguments</h4>
 <ul>
-<li>getValue (<em>function</em>): function that must return the value to compare, taking each element.</li>
+<li>elementSelector (<em>function</em>): function that must return the value to compare, taking each element.</li>
 </ul>
 <h4 id="returns">Returns</h4>
 <p>(<em>any</em>): max of the elements.</p>
@@ -2076,7 +2076,7 @@ Enumerable
         <a href="../../../docs/api/Others/IsEmpty.html" class="navigation navigation-prev " aria-label="Previous page: isEmpty()"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../docs/api/Others/Min.html" class="navigation navigation-next " aria-label="Next page: min(getValue = identityFunction)"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../docs/api/Others/Min.html" class="navigation navigation-next " aria-label="Next page: min(elementSelector = identityFunction)"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

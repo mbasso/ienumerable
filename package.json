@@ -1,7 +1,7 @@
 {
   "name": "ienumerable",
-  "version": "1.0.0",
-  "description": "A guard that represent central point of control in your application.",
+  "version": "1.0.1",
+  "description": "Deep immutable, Lightweight Enumerable with superpowers",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "files": [
