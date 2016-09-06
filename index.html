@@ -42,7 +42,7 @@
     <body>
         
         
-    <div class="book" data-level="0" data-basepath="." data-revision="Fri Sep 02 2016 23:12:56 GMT+0200 (CEST)">
+    <div class="book" data-level="0" data-basepath="." data-revision="Tue Sep 06 2016 22:35:38 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -2045,17 +2045,20 @@
 <blockquote>
 <p>Deep immutable, Lightweight Enumerable with superpowers</p>
 </blockquote>
+<hr>
+<p><strong>Attention - there are some important differences between IEnumerable and other existing LINQ implementations. You can find an example <a href="https://jsbin.com/figicok/edit?js,console" target="_blank">here</a> and IEnumerable features explanation <a href="http://ienumerable.js.org/docs/introduction/Features.html" target="_blank">here</a>.</strong></p>
+<hr>
 <p>IEnumerable is a library that allows you to create deeply immutable collections and query them with a Linq syntax. IEnumerable infact, is born from the idea to bring <a href="https://msdn.microsoft.com/en-us/library/bb397926.aspx" target="_blank">Linq</a> in JavaScript environment. Linq is a fantastic technique to query data and JavaScript should have it. In addition, we want to maintain the advantages of <a href="https://facebook.github.io/immutable-js/" target="_blank">Immutable Js</a> and improve them. In IEnumerable, not only the collection is immutable but also its content. Every method will return a new Enumerable and a new copy of its content.
 IEnumerable should not be confused with <a href="http://reactivex.io/" target="_blank">Rx</a> due to its syntax, IEnumerable and Rx are two different things that achieve different purposes. <a href="http://stackoverflow.com/questions/17082255/when-to-use-ienumerable-vs-iobservable" target="_blank">Here</a> is an interesting question about that.</p>
 <h2 id="installation">Installation</h2>
 <p>You can install IEnumerable using <a href="https://www.npmjs.com/package/ienumerable" target="_blank">npm</a>:</p>
-<pre><code class="lang-bash">npm <span class="token function">install</span> <span class="token operator">--</span>save ienumerable
+<pre><code class="lang-bash">npm <span class="token function">install</span> --save ienumerable
 </code></pre>
 <p>If you aren&apos;t using npm in your project, you can include IEnumerable using UMD build in the dist folder with <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span></code> tag.</p>
 <h2 id="usage">Usage</h2>
 <p>IEnumerable exports only one class to do its work. A complete guide about usage can be found <a href="https://mbasso.github.io/ienumerable/docs/api/index.html" target="_blank">here</a>.
 However, here is the gist:</p>
-<pre><code class="lang-js"><span class="token keyword">import</span> Enumerable from <span class="token string">&apos;ienumerable&apos;</span><span class="token punctuation">;</span>
+<pre><code class="lang-js"><span class="token keyword">import</span> Enumerable <span class="token keyword">from</span> <span class="token string">&apos;ienumerable&apos;</span><span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true">// represents an Address</span>
 <span class="token keyword">class</span> <span class="token class-name">Address</span> <span class="token punctuation">{</span>
@@ -2111,7 +2114,7 @@ Having Count(1)&gt;5
 
 <span class="token comment" spellcheck="true">// translating that select using an Enumerable</span>
 Enumerable
-        <span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>AddressArray<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>AddressArray<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span>state <span class="token operator">===</span> <span class="token string">&apos;MA&apos;</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">groupBy</span><span class="token punctuation">(</span>
           x <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token punctuation">.</span>city<span class="token punctuation">,</span>

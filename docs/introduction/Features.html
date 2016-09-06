@@ -44,7 +44,7 @@
     <body>
         
         
-    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Fri Sep 02 2016 23:12:56 GMT+0200 (CEST)">
+    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Tue Sep 06 2016 22:35:38 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -2042,7 +2042,7 @@
 <ul>
 <li><strong>Deep immutability</strong>, Enumerable is immutable. But, in addition, also all its content is immutable, don&apos;t worry to modify an object, don&apos;t worry about side effects.<pre><code class="lang-js"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span> foo<span class="token punctuation">:</span> <span class="token string">&apos;bar&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> bar <span class="token operator">=</span> Enumerable
-                  <span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span>
+                  <span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span>
                   <span class="token punctuation">.</span><span class="token function">first</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo <span class="token operator">===</span> bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
 <span class="token comment" spellcheck="true">// while</span>
@@ -2053,7 +2053,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><strong>Advanced object comparison</strong>, by default Enumerable uses a deep comparison algorithm to make it works. Objects are not compared by reference.<pre><code class="lang-js"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span> foo<span class="token punctuation">:</span> <span class="token string">&apos;bar&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token punctuation">{</span> foo<span class="token punctuation">:</span> <span class="token string">&apos;bar&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> result <span class="token operator">=</span> Enumerable
-                    <span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span>
                     <span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
 <span class="token comment" spellcheck="true">// while</span>
