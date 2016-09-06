@@ -8,6 +8,12 @@
 
 > Deep immutable, Lightweight Enumerable with superpowers
 
+- - -
+
+**Attention - there are some important differences between IEnumerable and other existing LINQ implementations. You can find an example [here](https://jsbin.com/figicok/edit?js,console) and IEnumerable features explanation [here](http://ienumerable.js.org/docs/introduction/Features.html).**
+
+- - -
+
 IEnumerable is a library that allows you to create deeply immutable collections and query them with a Linq syntax. IEnumerable infact, is born from the idea to bring [Linq](https://msdn.microsoft.com/en-us/library/bb397926.aspx) in JavaScript environment. Linq is a fantastic technique to query data and JavaScript should have it. In addition, we want to maintain the advantages of [Immutable Js](https://facebook.github.io/immutable-js/) and improve them. In IEnumerable, not only the collection is immutable but also its content. Every method will return a new Enumerable and a new copy of its content.
 IEnumerable should not be confused with [Rx](http://reactivex.io/) due to its syntax, IEnumerable and Rx are two different things that achieve different purposes. [Here](http://stackoverflow.com/questions/17082255/when-to-use-ienumerable-vs-iobservable) is an interesting question about that.
 
