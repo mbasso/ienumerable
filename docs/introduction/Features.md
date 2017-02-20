@@ -22,5 +22,6 @@ console.log(result); // true
 // while
 // [foo].includes(bar) is false
 ```
+- **Configurable**, by default Enumerable is deep immutable and uses an advanced object comparison algorithm, but you can enable and disable these features based on your needs.
 - **Linq syntax**, high compatible C# Linq syntax makes query easier and immediate to use.
-- **Lightweight**, IEnumerable consists only of 34kb weight including all methods and polyfills.
+- **Lightweight**

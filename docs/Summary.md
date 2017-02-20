@@ -4,6 +4,7 @@
 * [Introduction](/docs/introduction/README.md)
   * [Motivation](/docs/introduction/Motivation.md)
   * [Features](/docs/introduction/Features.md)
+  * [Configuration](/docs/introduction/Configuration.md)
   * [Examples](/docs/introduction/Examples.md)
 * [Glossary](/docs/Glossary.md)
 * [API Reference](/docs/api/README.md)

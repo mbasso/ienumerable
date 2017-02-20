@@ -1,6 +1,6 @@
 {
   "name": "ienumerable",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Deep immutable, Lightweight Enumerable with superpowers",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
@@ -23,10 +23,11 @@
     "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
     "prepublish": "npm run clean && npm run check:src && npm run build && check-es3-syntax lib/ dist/ --kill",
     "lint": "eslint src test build",
+    "docs:cpyreadme": "cpy 'README.md' docs",
     "docs:clean": "rimraf _book",
     "docs:prepare": "gitbook install",
-    "docs:watch": "npm run docs:prepare && gitbook serve",
-    "docs:build": "npm run docs:prepare && rm -rf _book && gitbook build",
+    "docs:watch": "npm run docs:cpyreadme && npm run docs:prepare && gitbook serve",
+    "docs:build": "npm run docs:cpyreadme && npm run docs:prepare && rm -rf _book && gitbook build",
     "docs:publish": "npm run docs:build && gh-pages -d _book"
   },
   "repository": {
@@ -62,6 +63,7 @@
     "babel-register": "6.9.0",
     "check-es3-syntax-cli": "0.1.0",
     "coveralls": "2.11.9",
+    "cpy-cli": "1.0.1",
     "cross-env": "1.0.7",
     "deep-freeze": "0.0.1",
     "eslint": "2.12.0",
@@ -71,7 +73,7 @@
     "eslint-plugin-react": "5.1.1",
     "expect": "1.20.2",
     "gh-pages": "0.11.0",
-    "gitbook-cli": "2.2.0",
+    "gitbook-cli": "2.3.0",
     "istanbul": "0.4.4",
     "mocha": "2.5.3",
     "nyc": "7.0.0",
@@ -93,6 +95,8 @@
     ]
   },
   "dependencies": {
-    "core-js": "2.4.1"
+    "core-js": "2.4.1",
+    "deep-equal": "1.0.1",
+    "lodash": "4.17.4"
   }
 }

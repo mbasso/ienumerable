@@ -1,8 +1,9 @@
 {
-  "gitbook": "2.4.3",
+  "gitbook": "3.x.x",
   "title": "IEnumerable",
+  "root": "./docs",
   "structure": {
-    "summary": "docs/Summary.md"
+    "summary": "Summary.md"
   },
   "plugins": ["edit-link", "prism", "-highlight", "github", "anker-enable"],
   "pluginsConfig": {

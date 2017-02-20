@@ -25,6 +25,27 @@ import {
 
 class Enumerable {
 
+  static deepImmutable = true;
+  static deepComparison = true;
+
+  deepCopy = obj => {
+    let result = obj;
+    if (Enumerable.deepImmutable) {
+      result = deepCopy(obj);
+    } else if (Array.isArray(result)) {
+      result = [...result];
+    }
+    return result;
+  }
+
+  comparerFunction = (x, y) => {
+    let result = x === y;
+    if (Enumerable.deepComparison) {
+      result = comparerFunction(x, y);
+    }
+    return result;
+  }
+
   // Creational
 
   static from = (...params) => new Enumerable(...params);
@@ -72,7 +93,7 @@ class Enumerable {
     if (params.length === 0) {
       this.array = this.getArrayFrom(source);
     } else {
-      this.array = [...this.getArrayFrom(source), ...deepCopy(params)];
+      this.array = [...this.getArrayFrom(source), ...this.deepCopy(params)];
     }
 
     this.delete = this.remove;
@@ -84,10 +105,10 @@ class Enumerable {
 
   findIndex = (func = trueFunction) => this.array.indexOf(this.array.find(func));
 
-  map = (...params) => new Enumerable(deepCopy(this.array).map(...params));
+  map = (...params) => new Enumerable(this.deepCopy(this.array).map(...params));
 
   forEach = (...params) => {
-    deepCopy(this.array).forEach(...params);
+    this.deepCopy(this.array).forEach(...params);
     return this;
   };
 
@@ -100,7 +121,7 @@ class Enumerable {
   reverse = () => new Enumerable([...this.array].reverse());
 
   sort = (...params) => {
-    const newArray = deepCopy(this.array);
+    const newArray = this.deepCopy(this.array);
     newArray.sort(...params);
     return new Enumerable(newArray);
   };
@@ -110,7 +131,7 @@ class Enumerable {
   reduce = (...params) => {
     let result;
     if (!(this.isEmpty() && params.length < 2)) {
-      result = deepCopy(this.array.reduce(...params));
+      result = this.deepCopy(this.array.reduce(...params));
     }
     return result;
   }
@@ -118,7 +139,7 @@ class Enumerable {
   reduceRight = (...params) => {
     let result;
     if (!(this.isEmpty() && params.length < 2)) {
-      result = deepCopy(this.array.reduceRight(...params));
+      result = this.deepCopy(this.array.reduceRight(...params));
     }
     return result;
   }
@@ -136,7 +157,7 @@ class Enumerable {
   indexOf = (item, start = 0) => {
     let i = start;
     while (i < this.array.length) {
-      if (comparerFunction(this.array[i], item)) {
+      if (this.comparerFunction(this.array[i], item)) {
         return i;
       }
       i++;
@@ -148,7 +169,7 @@ class Enumerable {
     let i = 0;
     let index = -1;
     while (i < end) {
-      if (comparerFunction(this.array[i], item)) {
+      if (this.comparerFunction(this.array[i], item)) {
         index = i;
       }
       i++;
@@ -163,7 +184,7 @@ class Enumerable {
   copyWithin = (...params) => new Enumerable([...this.array].copyWithin(...params));
 
   callOnArray = (func, callback = noop) => {
-    const newArray = deepCopy(this.array);
+    const newArray = this.deepCopy(this.array);
     callback(newArray[func]());
     return new Enumerable(newArray);
   }
@@ -172,18 +193,18 @@ class Enumerable {
 
   shift = this.callOnArray.bind(this, 'shift');
 
-  fill = (...params) => new Enumerable(deepCopy(this.array).fill(...params));
+  fill = (...params) => new Enumerable(this.deepCopy(this.array).fill(...params));
 
   // Sql like
 
-  elementAt = (index) => deepCopy(this.array[index]);
+  elementAt = (index) => this.deepCopy(this.array[index]);
 
   elementAtOrDefault = (index, defaultObj) => {
     let result = defaultObj;
     if (!isNullOrUndefined(this.array[index])) {
       result = this.array[index];
     }
-    return deepCopy(result);
+    return this.deepCopy(result);
   };
 
   where = this.filter;
@@ -205,7 +226,7 @@ class Enumerable {
         }, 0);
 
   update = (func) => this.map((x) => {
-    const value = deepCopy(x);
+    const value = this.deepCopy(x);
     const returnedValue = func(value);
     return returnedValue || value;
   });
@@ -224,10 +245,10 @@ class Enumerable {
     return this.filter(x => array.indexOf(x) !== -1);
   }
 
-  join = (collection, getFirstKey, getSecondKey, getNewObj, comparer = comparerFunction) => {
+  join = (collection, getFirstKey, getSecondKey, getNewObj, comparer = this.comparerFunction) => {
     const result = [];
     const arrayToJoin = this.getArrayFrom(collection);
-    deepCopy(this.array).forEach((first) => {
+    this.deepCopy(this.array).forEach((first) => {
       arrayToJoin.forEach((second) => {
         if (comparer(getFirstKey(first), getSecondKey(second))) {
           result.push(getNewObj(first, second));
@@ -237,10 +258,16 @@ class Enumerable {
     return new Enumerable(result);
   }
 
-  groupJoin = (collection, getFirstKey, getSecondKey, getNewObj, comparer = comparerFunction) => {
+  groupJoin = (
+    collection,
+    getFirstKey,
+    getSecondKey,
+    getNewObj,
+    comparer = this.comparerFunction
+  ) => {
     const result = [];
     const arrayToJoin = this.getArrayFrom(collection);
-    deepCopy(this.array).forEach((first) => {
+    this.deepCopy(this.array).forEach((first) => {
       const secondCollection = [];
       arrayToJoin.forEach((second) => {
         if (comparer(getFirstKey(first), getSecondKey(second))) {
@@ -258,9 +285,9 @@ class Enumerable {
     keySelector = getIndex,
     elementSelector = identityFunction,
     resultSelector = (key, items) => ({ key, items: items.toArray() }),
-    comparer = comparerFunction
+    comparer = this.comparerFunction
   ) => {
-    let keys = deepCopy(this.array).map((...params) => ({
+    let keys = this.deepCopy(this.array).map((...params) => ({
       key: keySelector(...params),
       element: elementSelector(...params),
     }));
@@ -318,7 +345,7 @@ class Enumerable {
   takeLastWhile = (predicate) => this.reverse().doWhile('take', predicate).reverse();
   skipLastWhile = (predicate) => this.reverse().doWhile('skip', predicate).reverse();
 
-  single = (func = trueFunction) => deepCopy(this.array.find(func));
+  single = (func = trueFunction) => this.deepCopy(this.array.find(func));
 
   singleOrDefault = (func, defaultObj) => {
     let result = defaultObj;
@@ -326,7 +353,7 @@ class Enumerable {
     if (found) {
       result = found;
     }
-    return deepCopy(result);
+    return this.deepCopy(result);
   }
 
   aggregate = this.reduce;
@@ -339,7 +366,7 @@ class Enumerable {
 
   toIterator = () => this.toArray()[Symbol.iterator]();
 
-  toArray = () => deepCopy(this.array);
+  toArray = () => this.deepCopy(this.array);
   toList = this.toArray;
 
   toJSON = () => JSON.stringify(this.toArray());
@@ -351,16 +378,16 @@ class Enumerable {
   toDictionary = (getKey = getIndex, getValue = identityFunction) => {
     const result = {};
     this.array.forEach((...params) => {
-      result[getKey(...params)] = deepCopy(getValue(...params));
+      result[getKey(...params)] = this.deepCopy(getValue(...params));
     });
     return result;
   }
 
-  releaseToType = (Type = Array) => new Type(...deepCopy(this.array));
+  releaseToType = (Type = Array) => new Type(...this.deepCopy(this.array));
   releaseToFormat = this.releaseToType;
 
   toType = (Type = Array) => {
-    const newArray = deepCopy(this.array);
+    const newArray = this.deepCopy(this.array);
     return Type === Array ? newArray : new Type(newArray);
   };
   toFormat = this.toType;
@@ -373,7 +400,7 @@ class Enumerable {
     return map;
   }
 
-  toSet = () => new Set(deepCopy(this.array));
+  toSet = () => new Set(this.deepCopy(this.array));
 
   toObject = () => this.toDictionary();
 
@@ -384,7 +411,7 @@ class Enumerable {
   flatten = () => new Enumerable(this.reduce((a, b) => a.concat(b), []));
   concatAll = this.flatten;
 
-  contains = (item) => this.count((current) => comparerFunction(current, item));
+  contains = (item) => this.count((current) => this.comparerFunction(current, item));
 
   sum = (func = identityFunction) =>
         this.reduce((previous, current) => previous + func(current), 0);
@@ -416,9 +443,9 @@ class Enumerable {
 
   any = (func = trueFunction) => this.array.some(func);
 
-  entire = (func = trueFunction) => func(deepCopy(this.array));
+  entire = (func = trueFunction) => func(this.deepCopy(this.array));
 
-  release = (func = noop) => func(...deepCopy(this.array));
+  release = (func = noop) => func(...this.deepCopy(this.array));
 
   cast = (construct) => this.map(construct);
 
@@ -438,7 +465,7 @@ class Enumerable {
     let valid = true;
     let i = 0;
     while (valid && i < items.length) {
-      valid = valid && !comparerFunction(x, items[i]);
+      valid = valid && !this.comparerFunction(x, items[i]);
       i++;
     }
     return valid;
@@ -479,7 +506,7 @@ class Enumerable {
     if (this.array.length >= 1) {
       same = !!this.array.reduce((a, b) => {
         let result = NaN;
-        if (comparerFunction(func(a), func(b))) {
+        if (this.comparerFunction(func(a), func(b))) {
           result = a;
         }
         return result;
