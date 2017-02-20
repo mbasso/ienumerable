@@ -12,8 +12,8 @@ Enumerable.deepComparison = false;
 
 // do some stuff
 Enumerable.from(...)
-					.select(...)
-					.toArray()
+          .select(...)
+          .toArray()
 
 // here we can re-enable configs if needed
 Enumerable.deepImmutable = true;
@@ -32,10 +32,10 @@ const data = [
 ];
 
 Enumerable.from(data)
-					.where(x => x.foo !== 'bar')
-					.update(x => {
-						x.foo = 'bar';
-					});
+          .where(x => x.foo !== 'bar')
+          .update(x => {
+            x.foo = 'bar';
+          });
 
 // data is now modified:
 // data = [

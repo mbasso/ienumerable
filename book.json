@@ -1,11 +1,10 @@
 {
-  "gitbook": "3.x.x",
+  "gitbook": "2.4.3",
   "title": "IEnumerable",
-  "root": "./docs",
   "structure": {
-    "summary": "Summary.md"
+    "summary": "docs/Summary.md"
   },
-  "plugins": ["edit-link", "prism", "-highlight", "github", "anker-enable"],
+  "plugins": ["edit-link", "prism@2.0.0", "-highlight", "github", "anker-enable"],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/mbasso/ienumerable/tree/master",
