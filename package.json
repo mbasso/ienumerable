@@ -1,6 +1,6 @@
 {
   "name": "ienumerable",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Deep immutable, Lightweight Enumerable with superpowers",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
@@ -26,7 +26,7 @@
     "docs:clean": "rimraf _book",
     "docs:prepare": "gitbook install",
     "docs:watch": "npm run docs:prepare && gitbook serve",
-    "docs:build": "npm run docs:prepare && rm -rf _book && gitbook build",
+    "docs:build": "npm run docs:prepare && rm -rf _book && gitbook build --log=debug --debug",
     "docs:publish": "npm run docs:build && gh-pages -d _book"
   },
   "repository": {
@@ -93,6 +93,8 @@
     ]
   },
   "dependencies": {
-    "core-js": "2.4.1"
+    "core-js": "2.4.1",
+    "deep-equal": "1.0.1",
+    "lodash": "4.17.4"
   }
 }

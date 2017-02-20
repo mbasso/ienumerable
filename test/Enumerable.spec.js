@@ -32,6 +32,55 @@ describe('Enumerable', () => {
                                   .from(peopleArray);
   deepFreeze(peopleEnumerable);
 
+  describe('Immutability', () => {
+    afterEach(() => {
+      Enumerable.deepImmutable = true;
+      Enumerable.deepComparison = true;
+    });
+
+    it('should be deep immutable', () => {
+      const foo = { foo: 'bar' };
+      const bar = Enumerable
+                        .from(foo)
+                        .first();
+      expect(bar).toEqual({ foo: 'bar' });
+      expect(foo === bar).toEqual(false);
+    });
+
+    it('should not be deep immutable', () => {
+      Enumerable.deepImmutable = false;
+      let foo = { foo: 'bar' };
+      let bar = Enumerable
+                        .from(foo)
+                        .first();
+      expect(bar).toEqual({ foo: 'bar' });
+      expect(foo === bar).toBeTruthy();
+      foo = ['foo', 'bar'];
+      bar = Enumerable.from(foo)
+                      .toArray();
+      expect(foo === bar).toBeFalsy();
+    });
+
+    it('should perform deep comparison', () => {
+      const foo = { foo: 'bar' };
+      const bar = { foo: 'bar' };
+      const result = Enumerable
+                          .from(foo)
+                          .includes(bar);
+      expect(result).toEqual(true);
+    });
+
+    it('should not perform deep comparison', () => {
+      Enumerable.deepComparison = false;
+      const foo = { foo: 'bar' };
+      const bar = { foo: 'bar' };
+      const result = Enumerable
+                          .from(foo)
+                          .includes(bar);
+      expect(result).toBeFalsy();
+    });
+  });
+
   describe('Creational', () => {
     it('should generate from', () => {
       let result = Enumerable
@@ -139,8 +188,6 @@ describe('Enumerable', () => {
       const result = peopleEnumerable
                       .toArray();
       expect(result).toMatch(peopleArray);
-      // immutability test
-      result[0].age = 50;
     });
 
     it('should convert to JSON', () => {
@@ -184,8 +231,6 @@ describe('Enumerable', () => {
         fooBar: peopleArray[1],
         loremIpsum: peopleArray[2],
       });
-      // immutability test
-      result.mbasso.age = 50;
       result = peopleEnumerable
                               .toDictionary();
       expect(result).toMatch({
@@ -354,8 +399,6 @@ describe('Enumerable', () => {
                       .select()
                       .toArray();
       expect(result).toMatch(peopleArray);
-      // immutability test
-      result[0].age = 50;
       result = peopleEnumerable
                       .select(x => x.name)
                       .toArray();
@@ -404,16 +447,12 @@ describe('Enumerable', () => {
       const result = peopleEnumerable
                       .first();
       expect(result).toMatch(peopleArray[0]);
-      // immutability test
-      result.age = 50;
     });
 
     it('should take last', () => {
       let result = peopleEnumerable
                       .last();
       expect(result).toMatch(peopleArray[2]);
-      // immutability test
-      result.age = 50;
       result = Enumerable
                       .empty()
                       .last();
@@ -534,7 +573,6 @@ describe('Enumerable', () => {
         foo: 2,
         bar: 3,
       }];
-      deepFreeze(data);
       let result = Enumerable
                       .from(data)
                       /* eslint-disable */
@@ -611,9 +649,6 @@ describe('Enumerable', () => {
                   .except([magnus])
                   .toArray();
       expect(result).toMatch([terry, charlotte]);
-      // immutability test
-      result[0].name = '';
-      result[1].name = '';
     });
 
     it('should perform union all', () => {
@@ -644,9 +679,6 @@ describe('Enumerable', () => {
                   .unionAll([john])
                   .toArray();
       expect(result).toMatch([magnus, terry, charlotte, john]);
-      // immutability test
-      result[0].name = '';
-      result[3].name = '';
     });
 
     it('should perform union', () => {
@@ -669,9 +701,6 @@ describe('Enumerable', () => {
                   .union([john])
                   .toArray();
       expect(result).toMatch([magnus, terry, charlotte, john]);
-      // immutability test
-      result[0].name = '';
-      result[3].name = '';
     });
 
     it('should Intersect', () => {
@@ -707,8 +736,6 @@ describe('Enumerable', () => {
                   .intersect([magnus])
                   .toArray();
       expect(result).toMatch([magnus]);
-      // immutability test
-      result[0].name = '';
     });
 
     it('should join', () => {
@@ -801,8 +828,6 @@ describe('Enumerable', () => {
       let result = peopleEnumerable
                       .single(x => x.name === 'Matteo');
       expect(result).toMatch(peopleArray[0]);
-      // immutability test
-      result.age = 50;
       result = peopleEnumerable
                       .single();
       expect(result).toMatch(peopleArray[0]);
@@ -816,8 +841,6 @@ describe('Enumerable', () => {
       result = peopleEnumerable
                     .firstOrDefault(-1);
       expect(result).toMatch(peopleArray[0]);
-      // immutability test
-      result.age = 50;
       result = Enumerable
                     .empty()
                     .firstOrDefault();
@@ -858,8 +881,6 @@ describe('Enumerable', () => {
                       .take()
                       .toArray();
       expect(result).toMatch(peopleArray);
-      // immutability test
-      result[0].age = 50;
     });
 
     it('should take last n', () => {
@@ -871,8 +892,6 @@ describe('Enumerable', () => {
                       .takeLast()
                       .toArray();
       expect(result).toMatch([...peopleArray]);
-      // immutability test
-      result[0].age = 50;
     });
 
     it('should take while', () => {
@@ -906,8 +925,6 @@ describe('Enumerable', () => {
                       .skip()
                       .toArray();
       expect(result).toMatch(peopleArray);
-      // immutability test
-      result[0].age = 50;
     });
 
     it('should skip last n', () => {
@@ -919,8 +936,6 @@ describe('Enumerable', () => {
                       .skipLast()
                       .toArray();
       expect(result).toMatch([...peopleArray]);
-      // immutability test
-      result[0].age = 50;
     });
 
     it('should skip while', () => {
@@ -1043,10 +1058,6 @@ describe('Enumerable', () => {
       result = data
                   .indexOf(5);
       expect(result).toEqual(-1);
-      result = Enumerable
-                  .from([{ foo: 'bar' }])
-                  .indexOf({ foo: 'bar' });
-      expect(result).toEqual(0);
       result = data
                   .indexOf(2, 2);
       expect(result).toEqual(4);
@@ -1300,10 +1311,6 @@ describe('Enumerable', () => {
       result = data
                   .lastIndexOf(2, 3);
       expect(result).toEqual(0);
-      result = Enumerable
-                      .from([{ foo: 'bar' }])
-                      .lastIndexOf({ foo: 'bar' });
-      expect(result).toEqual(0);
     });
   });
 
@@ -1538,8 +1545,6 @@ describe('Enumerable', () => {
       result = peopleEnumerable
                       .max(x => x.age);
       expect(result).toMatch(peopleArray[1]);
-      // immutability test
-      result.age = 50;
     });
 
     it('should get min', () => {
@@ -1550,8 +1555,6 @@ describe('Enumerable', () => {
       result = peopleEnumerable
                       .min(x => x.age);
       expect(result).toMatch(peopleArray[0]);
-      // immutability test
-      result.age = 50;
     });
 
     it('should count with contains', () => {

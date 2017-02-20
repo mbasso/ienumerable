@@ -1,29 +1,39 @@
+import equal from 'deep-equal';
+import _ from 'lodash/lang';
+
 export const identityFunction = (x) => x;
 export const getIndex = (x, i) => i;
 export const trueFunction = () => true;
 export const falseFunction = () => false;
 export const noop = () => {};
-export const isNullOrUndefined = (item) => typeof item === 'undefined' || item == null;
-export const comparerFunction = (x, y) => {
-  let result;
-  if (x == null && y == null
-      || typeof x === 'undefined' && typeof y === 'undefined') {
-    result = true;
+export const isNullOrUndefined = (item) => item === undefined || item == null;
+export const comparerFunction = (x, y) => equal(x, y, { strict: true });
+
+const isSerializable = (obj) => {
+  if (_.isNull(obj) ||
+      _.isBoolean(obj) ||
+      _.isNumber(obj) ||
+      _.isString(obj)) {
+    return true;
+  } else if (!_.isPlainObject(obj) &&
+      !_.isArray(obj)) {
+    return false;
+  // eslint-disable-next-line
   } else {
-    result = JSON.stringify(x) === JSON.stringify(y);
+    // eslint-disable-next-line
+    for (let key in obj) {
+      if (!isSerializable(obj[key])) {
+        return false;
+      }
+    }
   }
-  return result;
+  return true;
 };
 
 export const deepCopy = (item) => {
   let result = item;
-  if (Array.isArray(result)) {
-    result = result.map(deepCopy);
-  } else if (result && typeof result !== 'function' && result instanceof Object) {
-    result = Object.assign({}, result);
-    Object.keys(result).forEach((key) => {
-      result[key] = deepCopy(result[key]);
-    });
+  if (isSerializable(item)) {
+    result = JSON.parse(JSON.stringify(item));
   }
   return result;
 };
