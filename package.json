@@ -1,6 +1,6 @@
 {
   "name": "ienumerable",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Deep immutable, Lightweight Enumerable with superpowers",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
@@ -95,6 +95,6 @@
   "dependencies": {
     "core-js": "2.4.1",
     "deep-equal": "1.0.1",
-    "lodash": "4.17.4"
+    "lodash": "4.17.15"
   }
 }
